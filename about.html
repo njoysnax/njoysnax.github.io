@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Centum Nutrifoods — About Us</title><link href="style.css" rel="stylesheet"/><style>
+/* Ensure about page images are crisp and not stretched */
+.about-panels img,
+.contact-card .media img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
+  object-fit: contain;
+  filter: none;
+  transform: none;
+}
+</style></head>
+<body>
+<header class="navbar">
+<div class="nav-inner">
+<div class="brand-wrap"><img alt="logo" class="logo" src="assets/images/logo.jpg"/><div class="name">Centum Nutrifoods</div></div>
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a class="active" href="about.html">About Us</a>
+</nav>
+</div>
+</header>
+<main class="container about">
+<div class="about-hero">
+<div>
+<h2>Our Story</h2>
+<h3>From Kovilpatti to Every Corner of South India</h3>
+<p>Founded in 2012 by <strong>Sri Rathinasamy Jayaprakash</strong>, Centum Nutrifoods is a remarkable story of passion and perseverance. At the age of 66, our visionary promoter brought to life a dream of making traditional Peanut Chikki (Kadalai Mittai) from Kovilpatti — often hailed as the Lonavala of South India — accessible to all.</p>
+<p>Now nearing 80, Mr. Jayaprakash continues to inspire with his unwavering commitment to quality and excellence. Thanks to strict quality control, authentic recipes, and exceptional after-sales service, <strong>CENTUM</strong> products have found their way into over 500+ premium retail outlets across Tamil Nadu and Kerala.</p>
+</div>
+<div class="visual"><img alt="Centum visual" src="assets/images/logo.jpg"/></div>
+</div>
+<div class="about-panels">
+<div class="panel highlight"><h4>Crafted with Care</h4><p>We combine time-honoured techniques with modern hygiene to achieve that unmistakable CENTUM bite—crisp, clean, and full of flavour.</p></div>
+<div class="panel"><h4>State-of-the-Art Facility</h4><p>Precision equipment and rigorous QA checks ensure every batch meets our benchmark for purity and consistency.</p></div>
+<div class="panel"><h4>People Who Care</h4><p>Our chefs bring 30+ years of expertise, and our team shares a single promise: <em>delight in every bite.</em></p></div>
+</div>
+</main>
+<section class="contact container">
+<h3>Contact Us</h3>
+<div class="contact-card">
+<div>
+<div class="media"><img alt="Centum visual" src="assets/images/logo.jpg"/></div>
+<p><strong>Address</strong><br/> M/s.CENTUM NUTRIFOODS PRIVATE ITD, MSMR HOUSE, 48, Perumal Street, Kovilpatti(Tamilnadu).</p>
+<p><strong>Phone</strong><br/> +91-9025020600 / +91-8248384895</p>
+<p><strong>Email</strong><br/> <a href="mailto:centumnutrifoods@gmail.com"> centumnutrifoods@gmail.com </a></p>
+</div>
+</div>
+</section>
+<footer>© Centum Nutrifoods — Taste the Tradition. Trust the Quality.</footer>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        document.body.classList.toggle('nav-open');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+      });
+      // Close menu on link click (mobile)
+      document.querySelectorAll('.navbar nav a').forEach(a => {
+        a.addEventListener('click', () => {
+          document.body.classList.remove('nav-open');
+          btn.setAttribute('aria-expanded','false');
+        });
+      });
+    })();
+  </script>
+
+</body></html>
